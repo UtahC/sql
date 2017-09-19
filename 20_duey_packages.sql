@@ -16,7 +16,7 @@ CREATE TABLE `duey_packages` (
   `receiver_id` int(10) UNSIGNED NOT NULL,
   `sender_name` varchar(20) NOT NULL,
   `mesos` int(10) UNSIGNED NOT NULL,
-  `checked` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
+  `message` varchar(50) DEFAULT NULL,
   `type` tinyint(1) UNSIGNED DEFAULT NULL,
   `expired_at` datetime(3) NOT NULL,
   `received_at` datetime(3) DEFAULT NULL
@@ -25,7 +25,6 @@ CREATE TABLE `duey_packages` (
 
 ALTER TABLE `duey_packages`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_receiver_id_received_at` (`id`,`receiver_id`,`received_at`) USING BTREE,
   ADD KEY `receiver_id_received_at` (`receiver_id`,`received_at`) USING BTREE;
 
 
