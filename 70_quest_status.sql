@@ -17,8 +17,7 @@ CREATE TABLE `quest_status` (
   `quest_id` mediumint(8) UNSIGNED NOT NULL,
   `status` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `info` varchar(255) DEFAULT NULL,
-  `custom_data` varchar(255) DEFAULT NULL,
-  `custom_info_data` varchar(255) DEFAULT NULL,
+  `data` varchar(255) DEFAULT NULL,
   `forfeited` smallint(5) UNSIGNED NOT NULL DEFAULT 0 COMMENT '放棄次數',
   `created_at` datetime(3) NOT NULL,
   `updated_at` datetime(3) NOT NULL
